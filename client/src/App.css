@@ -1,0 +1,157 @@
+/* リセットとベーススタイル */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* アプリコンテナ */
+.app {
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 0 16px;
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+/* 検索フォーム */
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.search-form input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.search-form button {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s;
+  white-space: nowrap;
+}
+
+.search-form button:hover:not(:disabled) {
+  transform: scale(1.03);
+}
+
+.search-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 天気カード */
+.weather-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.weather-card h2 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.weather-main img {
+  width: 80px;
+  height: 80px;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item .label {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.detail-item .value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* エラーメッセージ */
+.error {
+  text-align: center;
+  color: #fff;
+  background: rgba(231, 76, 60, 0.85);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+/* 読み込み中 */
+.loading {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  padding: 20px;
+}
